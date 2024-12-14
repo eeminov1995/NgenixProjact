@@ -3,10 +3,55 @@
 {% block title %}Контакты{% endblock %}
 
 {% block content %}
-<h1>Контакты</h1>
-<p>Свяжитесь с нами по следующим контактам:</p>
-<ul>
-    <li>Email: contact@example.com</li>
-    <li>Телефон: +123456789</li>
-</ul>
+<div class="section">
+    <h2>Контакты</h2>
+    <p>Свяжитесь со мной через следующие сервисы:</p>
+    <ul>
+        <li>
+            <div id="lottie-github" class="icon" style="width: 30px; height: 30px;"></div>
+            GitHub:&nbsp;<a href="https://github.com/eeminov1995" target="_blank">eeminov1995</a>
+        </li>
+        <li>
+            <div id="lottie-telegram" class="icon" style="width: 30px; height: 30px;"></div>
+            Telegram:&nbsp;<a href="https://t.me/moonrhyme_bro" target="_blank">@moonrhyme_bro</a>
+        </li>
+        <li>
+            <div id="lottie-vk" class="icon" style="width: 30px; height: 30px;"></div>
+            VK:&nbsp;<a href="https://vk.com/moonrhyme" target="_blank">@moonrhyme</a>
+        </li>
+        <li>
+            <img src="{{ url_for('static', filename='mail.png') }}" alt="Email" class="icon" style="width: 30px; height: 30px;">
+            Email: e.eminov1995@mail.ru
+        </li>
+    </ul>
+</div>
+
+<!-- Подключение Lottie через CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+<script>
+    // Инициализация Lottie анимаций
+    var githubAnimation = bodymovin.loadAnimation({
+        container: document.getElementById('lottie-github'), // контейнер
+        renderer: 'svg', // рендерер
+        loop: true, // зацикливание
+        autoplay: true, // автозапуск
+        path: '{{ github_json_url }}' // путь к JSON файлу анимации
+    });
+
+    var telegramAnimation = bodymovin.loadAnimation({
+        container: document.getElementById('lottie-telegram'), // контейнер
+        renderer: 'svg', // рендерер
+        loop: true, // зацикливание
+        autoplay: true, // автозапуск
+        path: '{{ telegram_json_url }}' // путь к JSON файлу анимации
+    });
+
+    var vkAnimation = bodymovin.loadAnimation({
+        container: document.getElementById('lottie-vk'), // контейнер
+        renderer: 'svg', // рендерер
+        loop: true, // зацикливание
+        autoplay: true, // автозапуск
+        path: '{{ vk_json_url }}' // путь к JSON файлу анимации
+    });
+</script>
 {% endblock %}
