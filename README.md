@@ -1,8 +1,9 @@
-NgenixProgect/
+### Cтруктура Проекта
+
+```my_flask_app/
 │
 ├── app.py
 ├── requirements.txt
-├── README.md
 ├── .gitignore
 ├── .venv/
 ├── templates/
@@ -10,6 +11,9 @@ NgenixProgect/
 │   ├── index.html
 │   ├── contacts.html
 │   ├── streams.html
-│   └── videos.html
+│   ├── videos.html
+│   └── competencies.html
 └── static/
     └── style.css
+```
+#### [Ссылка на репозиторий](https://github.com/eeminov1995/NgenixProject)

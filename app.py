@@ -18,5 +18,9 @@ def streams():
 def videos():
     return render_template('videos.html')
 
+@app.route('/competencies')
+def competencies():
+    return render_template('competencies.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
