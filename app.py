@@ -1,6 +1,8 @@
 from flask import Flask, render_template, url_for
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)  # Включаем CORS для всего приложения
 
 @app.route('/')
 def index():
@@ -23,7 +25,7 @@ def streams():
 @app.route('/services')
 def services():
     return render_template('services.html')
-    
+
 @app.route('/videos')
 def videos():
     return render_template('videos.html')

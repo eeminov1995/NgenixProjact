@@ -1,6 +1,7 @@
 ### Cтруктура Проекта
 
-```my_flask_app/
+```
+NgenixProgect/
 │
 ├── app.py
 ├── requirements.txt

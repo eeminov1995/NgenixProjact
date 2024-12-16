@@ -1,119 +1,161 @@
 /* Общие стили */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    color: #000000;
+    font-family: 'Arial', sans-serif; /* Устанавливает шрифт для всего тела документа */
+    margin: 0; /* Убирает внешние отступы */
+    padding: 0; /* Убирает внутренние отступы */
+    background-color: #f5f5f5; /* Устанавливает фоновый цвет */
+    color: #000000; /* Устанавливает цвет текста */
 }
 
 /* Навигационное меню */
 nav {
-    background-color: #fff;
-    padding: 1em;
-    border-bottom: 1px solid #e0e0e0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #fff; /* Устанавливает фоновый цвет навигационного меню */
+    padding: 1em; /* Устанавливает внутренние отступы */
+    border-bottom: 1px solid #e0e0e0; /* Добавляет нижнюю границу */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавляет тень */
+    display: flex; /* Устанавливает flex-контейнер */
+    justify-content: center; /* Центрирует содержимое по горизонтали */
+    align-items: center; /* Центрирует содержимое по вертикали */
+    position: fixed; /* Закрепляет меню */
+    top: 0; /* Устанавливает верхний отступ */
+    left: 0; /* Устанавливает левый отступ */
+    right: 0; /* Устанавливает правый отступ */
+    z-index: 1000; /* Устанавливает z-index для отображения поверх других элементов */
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 1em;
+    list-style-type: none; /* Убирает маркеры списка */
+    padding: 0; /* Убирает внутренние отступы */
+    margin: 0; /* Убирает внешние отступы */
+    display: flex; /* Устанавливает flex-контейнер */
+    gap: 1em; /* Устанавливает промежуток между элементами */
 }
 
 nav ul li {
-    margin: 0;
+    margin: 0; /* Убирает внешние отступы */
 }
 
 nav ul li a {
-    color: #333;
-    text-decoration: none;
-    padding: 0.5em 1em;
-    border-radius: 4px;
-    transition: background-color 0.3s, transform 0.3s;
+    color: #333; /* Устанавливает цвет текста ссылок */
+    text-decoration: none; /* Убирает подчеркивание ссылок */
+    padding: 0.5em 1em; /* Устанавливает внутренние отступы */
+    border-radius: 4px; /* Скругляет углы */
+    transition: background-color 0.3s, transform 0.3s; /* Добавляет плавные переходы для фона и трансформации */
 }
 
 nav ul li a:hover {
-    background-color: #f0f0f0;
-    transform: scale(1.05);
+    background-color: #f0f0f0; /* Устанавливает фоновый цвет при наведении */
+    transform: scale(1.05); /* Увеличивает элемент при наведении */
 }
 
 /* Основное содержимое */
 main {
-    padding: 2em;
-    background-color: #fff;
-    margin: 2em auto;
-    max-width: 800px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2em; /* Устанавливает внутренние отступы */
+    background-color: #fff; /* Устанавливает фоновый цвет */
+    margin: 2em auto; /* Устанавливает внешние отступы и центрирует по горизонтали */
+    max-width: 800px; /* Устанавливает максимальную ширину */
+    border-radius: 8px; /* Скругляет углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавляет тень */
 }
 
 h1, h2, h3 {
-    color: #333;
-    margin-bottom: 1em;
-    text-align: center; /* Центрирование заголовков */
+    color: #333; /* Устанавливает цвет текста заголовков */
+    margin-bottom: 1em; /* Устанавливает нижний внешний отступ */
+    text-align: center; /* Центрирует текст */
 }
 
 p {
-    line-height: 1.6;
-    margin-bottom: 1em;
+    line-height: 1.6; /* Устанавливает высоту строки */
+    margin-bottom: 1em; /* Устанавливает нижний внешний отступ */
 }
 
 ul {
-    list-style-type: disc;
-    padding-left: 0;
-    margin-bottom: 1em;
+    list-style-type: disc; /* Устанавливает тип маркеров списка */
+    padding-left: 0; /* Убирает внутренние отступы слева */
+    margin-bottom: 1em; /* Устанавливает нижний внешний отступ */
 }
 
 ul li {
-    margin-bottom: 0.5em;
-    display: flex;
-    align-items: center;
+    margin-bottom: 0.5em; /* Устанавливает нижний внешний отступ */
+    display: flex; /* Устанавливает flex-контейнер */
+    align-items: center; /* Центрирует содержимое по вертикали */
 }
 
 ul li i {
-    margin-right: 0.5em;
-    font-size: 1.2em;
+    margin-right: 0.5em; /* Устанавливает правый внешний отступ */
+    font-size: 1.2em; /* Устанавливает размер шрифта */
 }
 
 /* Контейнер фото */
 .photo-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2em;
+    display: flex; /* Устанавливает flex-контейнер */
+    justify-content: center; /* Центрирует содержимое по горизонтали */
+    margin-bottom: 2em; /* Устанавливает нижний внешний отступ */
 }
 
 .photo-container img {
-    width: 768px; /* Фиксированная ширина */
-    height: 432px; /* Фиксированная высота */
-    object-fit: cover; /* Покрытие изображения */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 768px; /* Устанавливает фиксированную ширину */
+    height: 432px; /* Устанавливает фиксированную высоту */
+    object-fit: cover; /* Покрывает изображение */
+    border-radius: 8px; /* Скругляет углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавляет тень */
 }
 
 /* Блоки */
 .section {
-    margin-bottom: 2em;
-    padding: 1em;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    margin-bottom: 2em; /* Устанавливает нижний внешний отступ */
+    padding: 1em; /* Устанавливает внутренние отступы */
+    border-radius: 8px; /* Скругляет углы */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавляет тень */
+    background-color: #fff; /* Устанавливает фоновый цвет */
 }
 
 /* Контейнер для Lottie анимации */
 #lottie-container {
-    margin: 2em auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 2em auto; /* Устанавливает внешние отступы и центрирует по горизонтали */
+    display: flex; /* Устанавливает flex-контейнер */
+    justify-content: center; /* Центрирует содержимое по горизонтали */
+    align-items: center; /* Центрирует содержимое по вертикали */
 }
 
 /* Стили для иконок */
 .icon {
-    margin-right: 10px; /* Отступ справа от иконки */
+    margin-right: 10px; /* Устанавливает правый внешний отступ */
+}
+
+/* Центрирование видео */
+.video-container {
+    display: flex; /* Устанавливает flex-контейнер */
+    justify-content: center; /* Центрирует содержимое по горизонтали */
+    margin-bottom: 2em; /* Устанавливает нижний внешний отступ */
+    position: relative; /* Устанавливает относительное позиционирование */
+    padding: 2em; /* Устанавливает внутренние отступы */
+    border-radius: 16px; /* Скругляет углы */
+}
+
+.video-container video {
+    border-radius: 16px; /* Скругляет углы */
+    transition: transform 0.3s; /* Добавляет плавный переход для трансформации */
+}
+
+.video-container video:hover {
+    transform: scale(1.05); /* Увеличивает элемент при наведении */
+}
+
+.video-container::before {
+    content: ''; /* Создает псевдоэлемент */
+    position: absolute; /* Устанавливает абсолютное позиционирование */
+    top: 0; /* Устанавливает верхний отступ */
+    left: 0; /* Устанавливает левый отступ */
+    right: 0; /* Устанавливает правый отступ */
+    bottom: 0; /* Устанавливает нижний отступ */
+    background: rgba(255, 255, 255, 0); /* Устанавливает полупрозрачный фон */
+    border-radius: 16px; /* Скругляет углы */
+    opacity: 0; /* Устанавливает прозрачность */
+    transition: opacity 0.3s; /* Добавляет плавный переход для прозрачности */
+    pointer-events: none; /* Отключает события указателя */
+}
+
+.video-container:hover::before {
+    opacity: 1; /* Устанавливает прозрачность при наведении */
 }
