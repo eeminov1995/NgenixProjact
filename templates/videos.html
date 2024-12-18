@@ -5,4 +5,43 @@
 {% block content %}
 <h1>Видео</h1>
 <p style="text-align:center">Здесь вы можете посмотреть мои видео.</p>
+
+<div class="video-container" style="display: none;">
+    <video class="center" id="video" controls="" width="600"></video>
+    <div class="video-controls">
+        <button id="prev-video" style="display: none;">Предыдущее</button>
+        <button id="next-video">Следующее</button>
+        <button id="close-video">Закрыть</button>
+    </div>
+</div>
+
+<div class="video-list">
+    <div class="video-thumbnail" data-src="https://s51370.cdn.ngenix.net/s51370-vod-origin/ods/test1.mp4/index.m3u8">
+        <img src="{{ url_for('static', filename='videos/bunny.png') }}" alt="Видео 1">
+        <div>
+            <h3 style="text-align: left;">Заяц и белка</h3><br>
+            <p>Длина видео 9:56 минут</p>
+            <p>Дата добавления 18.12.2024</p><br>
+        </div>
+    </div>
+    <div class="video-thumbnail" data-src="https://s51370.cdn.ngenix.net/s51370-vod-origin/ods/test2.mp4/index.m3u8">
+        <img src="{{ url_for('static', filename='videos/rain.png') }}" alt="Видео 2">
+        <div>
+            <h3 style="text-align: left;">На улице rain, на душе pain</h3><br>
+            <p>Длина видео 7:09 минут</p>
+            <p>Дата добавления 18.12.2024</p><br>
+        </div>
+    </div>
+    <div class="video-thumbnail" data-src="https://s51370.cdn.ngenix.net/s51370-vod-origin/ods/test3.mp4/index.m3u8">
+        <img src="{{ url_for('static', filename='videos/waterfall.png') }}" alt="Видео 3">
+        <div>
+            <h3 style="text-align: left;">Водопады</h3><br>
+            <p>Длина видео 8:49 минут</p>
+            <p>Дата добавления 18.12.2024</p><br>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script src="{{ url_for('static', filename='scripts/videos.js') }}"></script>
 {% endblock %}

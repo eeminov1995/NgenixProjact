@@ -10,9 +10,9 @@ def index():
 
 @app.route('/contacts')
 def contacts():
-    github_json_url = url_for('static', filename='github.json')
-    telegram_json_url = url_for('static', filename='tg.json')
-    vk_json_url = url_for('static', filename='vk.json')
+    github_json_url = url_for('static', filename='contacts/github.json')
+    telegram_json_url = url_for('static', filename='contacts/tg.json')
+    vk_json_url = url_for('static', filename='contacts/vk.json')
     return render_template('contacts.html',
                            github_json_url=github_json_url,
                            telegram_json_url=telegram_json_url,

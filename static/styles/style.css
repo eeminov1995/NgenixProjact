@@ -21,6 +21,7 @@ nav {
     left: 0; /* Устанавливает левый отступ */
     right: 0; /* Устанавливает правый отступ */
     z-index: 1000; /* Устанавливает z-index для отображения поверх других элементов */
+    outline: 1px solid rgba(0, 0, 0, 0.269);
 }
 
 nav ul {
@@ -41,6 +42,8 @@ nav ul li a {
     padding: 0.5em 1em; /* Устанавливает внутренние отступы */
     border-radius: 4px; /* Скругляет углы */
     transition: background-color 0.3s, transform 0.3s; /* Добавляет плавные переходы для фона и трансформации */
+    outline: 1px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавляет тень */
 }
 
 nav ul li a:hover {
@@ -56,6 +59,7 @@ main {
     max-width: 800px; /* Устанавливает максимальную ширину */
     border-radius: 8px; /* Скругляет углы */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавляет тень */
+    outline: 1px solid rgba(0, 0, 0, 0.269);
 }
 
 h1, h2, h3 {
@@ -126,36 +130,80 @@ ul li i {
 /* Центрирование видео */
 .video-container {
     display: flex; /* Устанавливает flex-контейнер */
-    justify-content: center; /* Центрирует содержимое по горизонтали */
+    flex-direction: column; /* Устанавливает вертикальное направление */
+    align-items: center; /* Центрирует содержимое по горизонтали */
     margin-bottom: 2em; /* Устанавливает нижний внешний отступ */
     position: relative; /* Устанавливает относительное позиционирование */
     padding: 2em; /* Устанавливает внутренние отступы */
     border-radius: 16px; /* Скругляет углы */
+    background-color: #fff; /* Устанавливает фоновый цвет */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавляет тень */
 }
 
 .video-container video {
     border-radius: 16px; /* Скругляет углы */
     transition: transform 0.3s; /* Добавляет плавный переход для трансформации */
+    margin-bottom: 1em; /* Устанавливает нижний внешний отступ */
+    width: 100%; /* Устанавливает ширину видео */
+    max-width: 1000px; /* Максимальная ширина видео */
 }
 
 .video-container video:hover {
     transform: scale(1.05); /* Увеличивает элемент при наведении */
 }
 
-.video-container::before {
-    content: ''; /* Создает псевдоэлемент */
-    position: absolute; /* Устанавливает абсолютное позиционирование */
-    top: 0; /* Устанавливает верхний отступ */
-    left: 0; /* Устанавливает левый отступ */
-    right: 0; /* Устанавливает правый отступ */
-    bottom: 0; /* Устанавливает нижний отступ */
-    background: rgba(255, 255, 255, 0); /* Устанавливает полупрозрачный фон */
-    border-radius: 16px; /* Скругляет углы */
-    opacity: 0; /* Устанавливает прозрачность */
-    transition: opacity 0.3s; /* Добавляет плавный переход для прозрачности */
-    pointer-events: none; /* Отключает события указателя */
+.video-controls {
+    display: flex; /* Устанавливает flex-контейнер */
+    gap: 1em; /* Устанавливает промежуток между элементами */
+    justify-content: center; /* Центрирует содержимое по горизонтали */
+    margin-top: 1em; /* Устанавливает верхний внешний отступ */
 }
 
-.video-container:hover::before {
-    opacity: 1; /* Устанавливает прозрачность при наведении */
+.video-controls button {
+    padding: 0.5em 1em; /* Устанавливает внутренние отступы */
+    border: none; /* Убирает границы */
+    border-radius: 4px; /* Скругляет углы */
+    background-color: #333; /* Устанавливает фоновый цвет */
+    color: #fff; /* Устанавливает цвет текста */
+    cursor: pointer; /* Устанавливает курсор при наведении */
+    transition: background-color 0.3s; /* Добавляет плавный переход для фона */
+}
+
+.video-controls button:hover {
+    background-color: #555; /* Устанавливает фоновый цвет при наведении */
+}
+
+/* Стили для миниатюр видео */
+.video-list {
+    display: flex; /* Устанавливает flex-контейнер */
+    flex-direction: column; /* Устанавливает вертикальное направление */
+    gap: 1em; /* Устанавливает промежуток между элементами */
+    align-items: center; /* Центрирует содержимое по горизонтали */
+    margin-bottom: 2em; /* Устанавливает нижний внешний отступ */
+}
+
+.video-thumbnail {
+    cursor: pointer; /* Устанавливает курсор при наведении */
+    border-radius: 8px; /* Скругляет углы */
+    overflow: hidden; /* Скрывает переполнение */
+    transition: transform 0.3s; /* Добавляет плавный переход для трансформации */
+    width: 100%; /* Устанавливает ширину миниатюры */
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5); /* Добавляет тень */
+    display: flex; /* Устанавливает flex-контейнер */
+    align-items: center; /* Центрирует содержимое по вертикали */
+}
+
+.video-thumbnail:hover {
+    transform: scale(1.05); /* Увеличивает элемент при наведении */
+}
+
+.video-thumbnail img {
+    width: 150px; /* Устанавливает ширину */
+    height: 150px; /* Устанавливает автоматическую высоту */
+    margin-right: 1em; /* Устанавливает правый внешний отступ */
+}
+
+.video-thumbnail p {
+    margin: 0; /* Убирает внешние отступы */
+    font-size: 0.9em; /* Устанавливает размер шрифта */
 }

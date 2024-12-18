@@ -9,9 +9,9 @@
 
 
 <div class="video-container">
-    <video class="center" id="video" controls="" poster="{{ url_for('static', filename='offline.jpg') }}" width="600" autoplay="" src="{{ url_for('static', filename='test.mp4') }}"></video>
+    <video class="center" id="video" controls="" poster="{{ url_for('static', filename='streams/offline.jpg') }}" width="600" autoplay="" src="{{ url_for('static', filename='streams/test.mp4') }}"></video>
 </div>
 <!-- Подключаем библиотеку hls.js -->
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-<script src="{{ url_for('static', filename='streams.js') }}"></script>
+<script src="{{ url_for('static', filename='scripts/streams.js') }}"></script>
 {% endblock %}
