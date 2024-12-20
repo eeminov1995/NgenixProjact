@@ -65,4 +65,13 @@ document.addEventListener('DOMContentLoaded', function() {
             hls.destroy();
         }
     });
+
+    // Prevent video from going fullscreen on mobile devices
+    video.setAttribute('playsinline', '');
+    video.setAttribute('webkit-playsinline', '');
+    video.addEventListener('webkitpresentationmodechanged', function(event) {
+        if (video.webkitPresentationMode === "inline") {
+            video.webkitExitFullscreen();
+        }
+    });
 });

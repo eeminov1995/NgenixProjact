@@ -1,209 +1,285 @@
 /* Общие стили */
 body {
-    font-family: 'Arial', sans-serif; /* Устанавливает шрифт для всего тела документа */
-    margin: 0; /* Убирает внешние отступы */
-    padding: 0; /* Убирает внутренние отступы */
-    background-color: #f5f5f5; /* Устанавливает фоновый цвет */
-    color: #000000; /* Устанавливает цвет текста */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #000000;
 }
 
 /* Навигационное меню */
 nav {
-    background-color: #fff; /* Устанавливает фоновый цвет навигационного меню */
-    padding: 1em; /* Устанавливает внутренние отступы */
-    border-bottom: 1px solid #e0e0e0; /* Добавляет нижнюю границу */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавляет тень */
-    display: flex; /* Устанавливает flex-контейнер */
-    justify-content: center; /* Центрирует содержимое по горизонтали */
-    align-items: center; /* Центрирует содержимое по вертикали */
-    position: fixed; /* Закрепляет меню */
-    top: 0; /* Устанавливает верхний отступ */
-    left: 0; /* Устанавливает левый отступ */
-    right: 0; /* Устанавливает правый отступ */
-    z-index: 1000; /* Устанавливает z-index для отображения поверх других элементов */
+    background-color: #fff;
+    padding: 1em;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
     outline: 1px solid rgba(0, 0, 0, 0.269);
 }
 
 nav ul {
-    list-style-type: none; /* Убирает маркеры списка */
-    padding: 0; /* Убирает внутренние отступы */
-    margin: 0; /* Убирает внешние отступы */
-    display: flex; /* Устанавливает flex-контейнер */
-    gap: 1em; /* Устанавливает промежуток между элементами */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1em;
 }
 
 nav ul li {
-    margin: 0; /* Убирает внешние отступы */
+    margin: 0;
 }
 
 nav ul li a {
-    color: #333; /* Устанавливает цвет текста ссылок */
-    text-decoration: none; /* Убирает подчеркивание ссылок */
-    padding: 0.5em 1em; /* Устанавливает внутренние отступы */
-    border-radius: 4px; /* Скругляет углы */
-    transition: background-color 0.3s, transform 0.3s; /* Добавляет плавные переходы для фона и трансформации */
+    color: #333;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
     outline: 1px solid black;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавляет тень */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 nav ul li a:hover {
-    background-color: #f0f0f0; /* Устанавливает фоновый цвет при наведении */
-    transform: scale(1.05); /* Увеличивает элемент при наведении */
+    background-color: #f0f0f0;
+    transform: scale(1.05);
 }
 
 /* Основное содержимое */
 main {
-    padding: 2em; /* Устанавливает внутренние отступы */
-    background-color: #fff; /* Устанавливает фоновый цвет */
-    margin: 2em auto; /* Устанавливает внешние отступы и центрирует по горизонтали */
-    max-width: 800px; /* Устанавливает максимальную ширину */
-    border-radius: 8px; /* Скругляет углы */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавляет тень */
+    padding: 2em;
+    background-color: #fff;
+    margin: 2em auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     outline: 1px solid rgba(0, 0, 0, 0.269);
 }
 
 h1, h2, h3 {
-    color: #333; /* Устанавливает цвет текста заголовков */
-    margin-bottom: 1em; /* Устанавливает нижний внешний отступ */
-    text-align: center; /* Центрирует текст */
+    color: #333;
+    margin-bottom: 1em;
+    text-align: center;
 }
 
 p {
-    line-height: 1.6; /* Устанавливает высоту строки */
-    margin-bottom: 1em; /* Устанавливает нижний внешний отступ */
+    line-height: 1.6;
+    margin-bottom: 1em;
 }
 
 ul {
-    list-style-type: disc; /* Устанавливает тип маркеров списка */
-    padding-left: 0; /* Убирает внутренние отступы слева */
-    margin-bottom: 1em; /* Устанавливает нижний внешний отступ */
+    list-style-type: disc;
+    padding-left: 0;
+    margin-bottom: 1em;
 }
 
 ul li {
-    margin-bottom: 0.5em; /* Устанавливает нижний внешний отступ */
-    display: flex; /* Устанавливает flex-контейнер */
-    align-items: center; /* Центрирует содержимое по вертикали */
+    margin-bottom: 0.5em;
+    display: flex;
+    align-items: center;
 }
 
 ul li i {
-    margin-right: 0.5em; /* Устанавливает правый внешний отступ */
-    font-size: 1.2em; /* Устанавливает размер шрифта */
+    margin-right: 0.5em;
+    font-size: 1.2em;
 }
 
 /* Контейнер фото */
 .photo-container {
-    display: flex; /* Устанавливает flex-контейнер */
-    justify-content: center; /* Центрирует содержимое по горизонтали */
-    margin-bottom: 2em; /* Устанавливает нижний внешний отступ */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
 }
 
 .photo-container img {
-    width: 768px; /* Устанавливает фиксированную ширину */
-    height: 432px; /* Устанавливает фиксированную высоту */
-    object-fit: cover; /* Покрывает изображение */
-    border-radius: 8px; /* Скругляет углы */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавляет тень */
+    width: 768px;
+    height: 432px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Блоки */
 .section {
-    margin-bottom: 2em; /* Устанавливает нижний внешний отступ */
-    padding: 1em; /* Устанавливает внутренние отступы */
-    border-radius: 8px; /* Скругляет углы */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавляет тень */
-    background-color: #fff; /* Устанавливает фоновый цвет */
+    margin-bottom: 2em;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
 }
 
 /* Контейнер для Lottie анимации */
 #lottie-container {
-    margin: 2em auto; /* Устанавливает внешние отступы и центрирует по горизонтали */
-    display: flex; /* Устанавливает flex-контейнер */
-    justify-content: center; /* Центрирует содержимое по горизонтали */
-    align-items: center; /* Центрирует содержимое по вертикали */
+    margin: 2em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Стили для иконок */
 .icon {
-    margin-right: 10px; /* Устанавливает правый внешний отступ */
+    margin-right: 10px;
 }
 
 /* Центрирование видео */
 .video-container {
-    display: flex; /* Устанавливает flex-контейнер */
-    flex-direction: column; /* Устанавливает вертикальное направление */
-    align-items: center; /* Центрирует содержимое по горизонтали */
-    margin-bottom: 2em; /* Устанавливает нижний внешний отступ */
-    position: relative; /* Устанавливает относительное позиционирование */
-    padding: 2em; /* Устанавливает внутренние отступы */
-    border-radius: 16px; /* Скругляет углы */
-    background-color: #fff; /* Устанавливает фоновый цвет */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавляет тень */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2em;
+    position: relative;
+    padding: 2em;
+    border-radius: 16px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .video-container video {
-    border-radius: 16px; /* Скругляет углы */
-    transition: transform 0.3s; /* Добавляет плавный переход для трансформации */
-    margin-bottom: 1em; /* Устанавливает нижний внешний отступ */
-    width: 100%; /* Устанавливает ширину видео */
-    max-width: 1000px; /* Максимальная ширина видео */
+    border-radius: 16px;
+    transition: transform 0.3s;
+    margin-bottom: 1em;
+    width: 100%;
+    max-width: 1000px;
 }
 
 .video-container video:hover {
-    transform: scale(1.05); /* Увеличивает элемент при наведении */
+    transform: scale(1.05);
 }
 
 .video-controls {
-    display: flex; /* Устанавливает flex-контейнер */
-    gap: 1em; /* Устанавливает промежуток между элементами */
-    justify-content: center; /* Центрирует содержимое по горизонтали */
-    margin-top: 1em; /* Устанавливает верхний внешний отступ */
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    margin-top: 1em;
 }
 
 .video-controls button {
-    padding: 0.5em 1em; /* Устанавливает внутренние отступы */
-    border: none; /* Убирает границы */
-    border-radius: 4px; /* Скругляет углы */
-    background-color: #333; /* Устанавливает фоновый цвет */
-    color: #fff; /* Устанавливает цвет текста */
-    cursor: pointer; /* Устанавливает курсор при наведении */
-    transition: background-color 0.3s; /* Добавляет плавный переход для фона */
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .video-controls button:hover {
-    background-color: #555; /* Устанавливает фоновый цвет при наведении */
+    background-color: #555;
 }
 
 /* Стили для миниатюр видео */
 .video-list {
-    display: flex; /* Устанавливает flex-контейнер */
-    flex-direction: column; /* Устанавливает вертикальное направление */
-    gap: 1em; /* Устанавливает промежуток между элементами */
-    align-items: center; /* Центрирует содержимое по горизонтали */
-    margin-bottom: 2em; /* Устанавливает нижний внешний отступ */
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    margin-bottom: 2em;
 }
 
 .video-thumbnail {
-    cursor: pointer; /* Устанавливает курсор при наведении */
-    border-radius: 8px; /* Скругляет углы */
-    overflow: hidden; /* Скрывает переполнение */
-    transition: transform 0.3s; /* Добавляет плавный переход для трансформации */
-    width: 100%; /* Устанавливает ширину миниатюры */
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5); /* Добавляет тень */
-    display: flex; /* Устанавливает flex-контейнер */
-    align-items: center; /* Центрирует содержимое по вертикали */
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    width: 100%;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
 }
 
 .video-thumbnail:hover {
-    transform: scale(1.05); /* Увеличивает элемент при наведении */
+    transform: scale(1.05);
 }
 
 .video-thumbnail img {
-    width: 150px; /* Устанавливает ширину */
-    height: 150px; /* Устанавливает автоматическую высоту */
-    margin-right: 1em; /* Устанавливает правый внешний отступ */
+    width: 150px;
+    height: 150px;
+    margin-right: 1em;
 }
 
 .video-thumbnail p {
-    margin: 0; /* Убирает внешние отступы */
-    font-size: 0.9em; /* Устанавливает размер шрифта */
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 768px) {
+    nav {
+        position: fixed;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 0.5em;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        padding: 0.5em;
+        font-size: 0.9em;
+    }
+
+    main {
+        padding: 1em;
+        margin: 1em;
+    }
+
+    main::before {
+        content: "";
+        display: block;
+        height: 4em; /* Высота nav */
+    }
+
+    .photo-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .video-container {
+        padding: 1em;
+    }
+
+    .video-thumbnail img {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Предотвращение автоматического разворачивания видео на весь экран */
+    .video-container video {
+        width: 100%;
+        height: auto;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -webkit-transition: none;
+        transition: none;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li a {
+        padding: 0.3em;
+        font-size: 0.8em;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    .video-thumbnail img {
+        width: 80px;
+        height: 80px;
+    }
 }
